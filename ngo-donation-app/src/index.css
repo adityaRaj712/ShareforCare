@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dark-mode-bg {
+  background-color: #2e2e2e; /* Light black or a dark gray color */
+}
+body {
+  background-color: #ffffff; /* Light mode background */
+}
+
+body.dark {
+  background-color: #000000; /* Dark mode background */
+}
+
