@@ -120,19 +120,19 @@ const Sponsor = () => {
               Sponsorship FAQ
             </a>
             <a
-              href="#"
+              href="/sponsorform"
               className="mb-4 px-6 py-3 bg-green-600 text-white font-medium text-sm rounded-md shadow-md hover:bg-green-500 transition">
               Sponsor a Child Today
             </a>
             <a
-              href="#"
+              href="sponsorform2"
               className="mb-4 px-6 py-3 bg-blue-600 text-white font-medium text-sm rounded-md shadow-md hover:bg-blue-500 transition">
-              Sponsor an Elderly
+              Sponsor an Elderly Today
             </a>
             <a
-              href="#"
+              href="sponsorform3"
               className="px-6 py-3 bg-yellow-600 text-white font-medium text-sm rounded-md shadow-md hover:bg-yellow-500 transition">
-              Sponsor an Animal
+              Sponsor an Animal Today
             </a>
           </div>
         </div>

@@ -9,6 +9,9 @@ import Contact from './pages/Contact';
 import Donate from './pages/Donate';
 import NotFound from './pages/Notfound';
 import Sponsor from './pages/sponsor';
+import SponsorForm from './pages/SponsorForm';
+import SponsorForm2 from './pages/SponsorForm2';
+import SponsorForm3 from './pages/SponsorForm3';
 
  // Optional: 404 Not Found page
 
@@ -25,6 +28,9 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/sponsor" element={<Sponsor/>} />
+        <Route path="/sponsorform" element={<SponsorForm/>}/>
+        <Route path="/sponsorform2" element={<SponsorForm2/>}/>
+        <Route path="/sponsorform3" element={<SponsorForm3/>}/>
         {/* Optional catch-all route for undefined paths */}
         <Route path="*" element={<NotFound/>} />
       </Routes>
