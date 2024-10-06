@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import ThemeContext from '../context/ThemeContext';  // Adjust path as needed
+import ThemeContext from '../context/ThemeContext';
 import { useNavigate } from 'react-router-dom';
 
 const About = () => {

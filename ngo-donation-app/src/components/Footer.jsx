@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-gray-100 dark:bg-gray-800 text-black dark:text-gray-300 pt-8 pb-4 mt-16">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0">
-          {/* Brand Logo */}
+         
           <div className="flex flex-col">
             <h1 className="text-2xl font-bold text-blue-600 dark:text-pink-300 mb-2">
               ShareForCare
@@ -18,7 +18,6 @@ const Footer = () => {
           </div>
 
 
-          {/* Social Media Links */}
           <div className="flex space-x-6">
             <a
               href="https://facebook.com"

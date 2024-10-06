@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Slider from 'react-slick'; // Import Slider from react-slick
-import 'slick-carousel/slick/slick.css'; // Import Slick CSS
-import 'slick-carousel/slick/slick-theme.css'; // Import Slick Theme CSS
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import childrenImage from '../assets/children.jpg';
 import elderlyImage from '../assets/elderly.jpg';
 import dog from '../assets/dog.png';
@@ -23,7 +23,6 @@ const Sponsor = () => {
 
   return (
     <div className={`${darkMode ? 'dark' : ''}`}>
-      {/* Hero Section */}
       <section className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
           <div className="lg:text-center">
@@ -63,7 +62,6 @@ const Sponsor = () => {
             </p>
           </div>
 
-          {/* New Section: Make a Difference Through Sponsorship */}
           <div className="mt-16 bg-gray-100 dark:bg-gray-800 p-6 rounded-md shadow-md">
             <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
               Make a Difference Through Sponsorship
@@ -156,7 +154,6 @@ const Sponsor = () => {
               <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-100">Stay Connected</h4>
               <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">Follow us on social media</p>
               <div className="mt-4 space-x-4">
-                {/* Social media icons */}
                 <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200">
                   <i className="fab fa-facebook-f"></i>
                 </a>

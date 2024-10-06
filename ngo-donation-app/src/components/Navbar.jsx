@@ -17,20 +17,18 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="bg-transparent p-4 shadow-md dark:bg-black m-0 ml-5 mr-5"> {/* Removed ml-5 and mr-5 */}
+    <nav className="bg-transparent p-4 shadow-md dark:bg-black m-0 ml-5 mr-5"> 
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold font-mono tracking-widest text-blue-600 dark:text-pink-300">
           ShareForCare
         </Link>
         
-        {/* Mobile Menu Icon */}
         <div className="md:hidden">
           <button onClick={toggleDrawer(true)}>
             <MenuIcon className="h-6 w-6 text-black dark:text-white" />
           </button>
         </div>
 
-        {/* Drawer for mobile */}
         {drawerOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-50 z-50" onClick={toggleDrawer(false)}>
             <div className="bg-white dark:bg-gray-900 fixed right-0 top-0 h-full w-64 z-50">
@@ -45,7 +43,6 @@ const Navbar = () => {
           </div>
         )}
 
-        {/* Desktop Links */}
         <div className="hidden md:flex space-x-4 items-center">
           <Link to="/" className="text-black dark:text-white">Home</Link>
           <Link to="/about" className="text-black dark:text-white">About</Link>
