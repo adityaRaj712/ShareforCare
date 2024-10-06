@@ -36,6 +36,7 @@ const Navbar = () => {
                 <li><Link to="/" onClick={toggleDrawer(false)} className="text-black dark:text-white">Home</Link></li>
                 <li><Link to="/about" onClick={toggleDrawer(false)} className="text-black dark:text-white">About</Link></li>
                 <li><Link to="/contact" onClick={toggleDrawer(false)} className="text-black dark:text-white">Contact</Link></li>
+                <li><Link to="/blog" onClick={toggleDrawer(false)} className="text-black dark:text-white">Blogs</Link></li>
                 <li><Link to="/donate" onClick={toggleDrawer(false)} className="text-black dark:text-white">Donate</Link></li>
                 <li><Link to="/sponsor" onClick={toggleDrawer(false)} className="text-black dark:text-white">Sponsor</Link></li>
               </ul>
@@ -47,6 +48,7 @@ const Navbar = () => {
           <Link to="/" className="text-black dark:text-white">Home</Link>
           <Link to="/about" className="text-black dark:text-white">About</Link>
           <Link to="/contact" className="text-black dark:text-white">Contact</Link>
+          <Link to="/blog" className="text-black dark:text-white">Blogs</Link>
           <button
             type="button"
               onClick={() => window.location.href = '/donate'}

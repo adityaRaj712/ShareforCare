@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Routes, Route } from 'react-router-dom'; // No need to import BrowserRouter here
+import { Routes, Route } from 'react-router-dom';
 import ThemeContext from './context/ThemeContext';
 import LandingPage from './pages/LandingPage';
 import Navbar from './components/Navbar';
@@ -12,6 +12,7 @@ import Sponsor from './pages/sponsor';
 import SponsorForm from './pages/SponsorForm';
 import SponsorForm2 from './pages/SponsorForm2';
 import SponsorForm3 from './pages/SponsorForm3';
+import Blogs from './pages/Blogs';
 
  // Optional: 404 Not Found page
 
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/" element={<LandingPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/blog" element={<Blogs/>} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/sponsor" element={<Sponsor/>} />
         <Route path="/sponsorform" element={<SponsorForm/>}/>
@@ -35,7 +37,7 @@ const App = () => {
         <Route path="*" element={<NotFound/>} />
       </Routes>
 
-      <Footer /> {/* Footer will also be present on all routes */}
+      <Footer />
     </div>
   );
 };
