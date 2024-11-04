@@ -2,7 +2,7 @@ import React from 'react';
 
 const CardComponent = ({ step, title, description }) => {
   return (
-    <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
+    <div className="bg-gray-200 dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
       <h3 className="text-lg font-semibold text-secondary dark:text-pink-300">
         {`Step ${step}: ${title}`}
       </h3>

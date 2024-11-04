@@ -17,7 +17,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="bg-transparent p-4 shadow-md dark:bg-black m-0 ml-5 mr-5"> 
+    <nav className="bg-transparent p-4 shadow-md bg-gray-200 dark:bg-indigo-800 m-0"> 
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold font-mono tracking-widest text-blue-600 dark:text-pink-300">
           ShareForCare

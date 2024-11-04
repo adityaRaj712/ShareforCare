@@ -1,13 +1,14 @@
-import { useState } from 'react';
+import { useContext } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import childrenImage from '../assets/children.jpg';
 import elderlyImage from '../assets/elderly.jpg';
 import dog from '../assets/dog.png';
+import ThemeContext from '../context/ThemeContext';
 
 const Sponsor = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const { darkMode } = useContext(ThemeContext);
 
   // Carousel settings
   const settings = {

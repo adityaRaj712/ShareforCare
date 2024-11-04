@@ -9,20 +9,20 @@ const LandingPage = () => {
   return (
     // Apply dark:bg-black to ensure the background is black in dark mode
     <div className={`${darkMode ? 'dark' : ''} min-h-screen`}>
-      <div className="ml-5 mr-5 dark:bg-black bg-white">
+      <div className=" dark:bg-indigo-500 bg-white">
         <HeroComponent />
         <div className="container mx-auto py-12">
           {/* Mission Section */}
           <section className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-blue-600 dark:text-pink-500">Our Mission</h2>
-            <p className="mt-4 text-gray-700 dark:text-blue-700">
+            <h2 className="text-3xl font-bold text-blue-600 dark:text-green-400">Our Mission</h2>
+            <p className="mt-4 font-bold text-gray-700 dark:text-black-900">
               We aim to make the world a better place by providing the most essential items to those in need, ensuring their well-being and dignity.
             </p>
           </section>
 
           {/* How It Works Section */}
-          <section className="text-center mb-16 ml-4 mr-4">
-            <h2 className="text-3xl font-bold text-blue-600 dark:text-pink-500 mb-8">How It Works</h2>
+          <section className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-blue-600 dark:text-green-400 mb-8">How It Works</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <CardComponent
                 step="1"
