@@ -14,7 +14,7 @@ const About = () => {
   }
 
   return (
-    <div className={`p-8 ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
+    <div className={`p-8 ${darkMode ? 'bg-glossy-black text-white' : 'bg-white text-black'}`}>
       <div className="container mx-auto">
         <h1 className="text-4xl font-bold text-center mb-8">About ShareforCare</h1>
 

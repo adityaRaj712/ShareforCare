@@ -9,7 +9,7 @@ const LandingPage = () => {
   return (
     // Apply dark:bg-black to ensure the background is black in dark mode
     <div className={`${darkMode ? 'dark' : ''} min-h-screen`}>
-      <div className=" dark:bg-indigo-500 bg-white">
+      <div className=" dark:bg-glossy-black bg-white">
         <HeroComponent />
         <div className="container mx-auto py-12">
           {/* Mission Section */}

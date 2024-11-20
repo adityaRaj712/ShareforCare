@@ -1,7 +1,35 @@
-import React from 'react';
+import {React, useState} from 'react';
+import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 import childrenImage from '../assets/children.jpg';
 
 const FormPage = () => {
+
+  const [formData, setFormData] = useState({
+    gender: "",
+    age: "",
+    childName: "",
+    amount: "",
+    message: "",
+  });
+
+  const navigate = useNavigate();
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post("http://localhost:3000/submit-sponsor-child", formData);
+      navigate("/qr");
+    } catch (error) {
+      console.error("Error submitting form", error);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
       {/* Navbar */}
@@ -19,7 +47,7 @@ const FormPage = () => {
             alt="Image 1" 
             className="mx-auto rounded-md shadow-md max-w-full h-auto mb-3"
         />
-        <form className="space-y-6">
+        <form className="space-y-6" onSubmit={handleSubmit}>
 
           {/* Gender Preference */}
           <div>
@@ -27,7 +55,7 @@ const FormPage = () => {
             <div className="flex gap-4">
               {['Girl', 'Boy', 'Either gender'].map(gender => (
                 <label key={gender}>
-                  <input type="radio" name="gender" value={gender} /> {gender}
+                  <input type="radio" name="gender" value={gender} onChange={handleInputChange} /> {gender}
                 </label>
               ))}
             </div>
@@ -39,7 +67,7 @@ const FormPage = () => {
             <div className="flex gap-4">
               {['0 - 10 years old', '11 - 18 years old', 'College Student', 'Any age'].map(age => (
                 <label key={age}>
-                  <input type="radio" name="age" value={age} /> {age}
+                  <input type="radio" name="age" value={age} onChange={handleInputChange}/> {age}
                 </label>
               ))}
             </div>
@@ -50,9 +78,10 @@ const FormPage = () => {
             <label className="block text-lg font-semibold">Child’s Name (if known)</label>
             <input
               type="text"
-              name="childName"
+              name="name"
               className="w-full border p-2 bg-white dark:bg-gray-700 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
               placeholder="Enter name..."
+              onChange={handleInputChange}
             />
           </div>
 
@@ -61,7 +90,7 @@ const FormPage = () => {
             <label className="block text-lg font-semibold">Sponsorship Amount</label>
             <div className="flex gap-4">
               <label>
-                <input type="radio" name="amount" value="$40" /> ₹ 10000
+                <input type="radio" name="amount" value="$40" onChange={handleInputChange}/> ₹ 10000
               </label>
               <label>
                 <input type="radio" name="amount" value="Other Amount" /> Other Amount
@@ -77,6 +106,7 @@ const FormPage = () => {
               className="w-full border p-2 bg-white dark:bg-gray-700 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
               rows="4"
               placeholder="Enter your message..."
+              onChange={handleInputChange}
             />
           </div>
 

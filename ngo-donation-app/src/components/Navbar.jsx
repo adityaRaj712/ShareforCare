@@ -17,7 +17,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="bg-transparent p-4 shadow-md bg-gray-200 dark:bg-indigo-800 m-0"> 
+    <nav className="bg-transparent p-2 shadow-md bg-gray-200 dark:bg-glossy-black m-0"> 
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold font-mono tracking-widest text-blue-600 dark:text-pink-300">
           ShareForCare
@@ -32,7 +32,7 @@ const Navbar = () => {
         {drawerOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-50 z-50" onClick={toggleDrawer(false)}>
             <div className="bg-white dark:bg-gray-900 fixed right-0 top-0 h-full w-64 z-50">
-              <ul className="flex flex-col p-4 space-y-4">
+              <ul className="flex flex-col items-center p-4 space-y-4">
                 <li><Link to="/" onClick={toggleDrawer(false)} className="text-black dark:text-white">Home</Link></li>
                 <li><Link to="/about" onClick={toggleDrawer(false)} className="text-black dark:text-white">About</Link></li>
                 <li><Link to="/contact" onClick={toggleDrawer(false)} className="text-black dark:text-white">Contact</Link></li>
@@ -44,11 +44,12 @@ const Navbar = () => {
           </div>
         )}
 
+
         <div className="hidden md:flex space-x-4 items-center">
           <Link to="/" className="text-black dark:text-white">Home</Link>
           <Link to="/about" className="text-black dark:text-white">About</Link>
           <Link to="/contact" className="text-black dark:text-white">Contact</Link>
-          <Link to="/blog" className="text-black dark:text-white">Blogs</Link>
+          <Link to="/blog" className="text-black mr-6 dark:text-white">Blogs</Link>
           <button
             type="button"
               onClick={() => window.location.href = '/donate'}
@@ -56,7 +57,7 @@ const Navbar = () => {
             >
               Donate
           </button>
-          <button type="button" onClick={handleSponsorClick} class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Sponsor</button>
+          <button type="button" onClick={handleSponsorClick} className="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Sponsor</button>
           <button 
               onClick={toggleDarkMode} 
               className="ml-4 flex items-center"

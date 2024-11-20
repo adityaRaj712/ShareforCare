@@ -7,9 +7,10 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        'dark-mode-bg': '#000000', // Optionally extend colors if needed
-      },
+      
+        colors: {
+          'glossy-black': '#0a0a0a', // Dark black with a glossy feel
+        },
     },
   },
   plugins: [],

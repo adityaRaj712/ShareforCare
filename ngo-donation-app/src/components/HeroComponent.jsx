@@ -1,10 +1,10 @@
 import React from 'react';
-import heroImage from '../assets/hero2.jpg';
+import heroImage from '../assets/hero.jpeg';
 
 const HeroComponent = () => {
   return (
     <div
-      className="h-[80vh] bg-cover bg-center flex items-center justify-center rounded-lg mx-auto m-0 p-0" // Removed my-10
+      className="h-[80vh] w-[90vw] bg-cover bg-center flex items-center justify-center rounded-lg mx-auto m-0 p-0" // Removed my-10
       style={{ backgroundImage: `url(${heroImage})` }}
     >
       <div className="text-center">

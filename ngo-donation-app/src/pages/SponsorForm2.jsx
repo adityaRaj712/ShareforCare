@@ -1,8 +1,19 @@
 import React from 'react';
+import axios from 'axios';
 import childrenImage from '../assets/children.jpg';
 import elderlyImage from '../assets/elderly.jpg';
 
 const SponsorForm2 = () => {
+  const handleSubmit = async (e) => {
+      e.preventDefault();
+      try {
+          await axios.post("http://localhost:5000/submit-sponsor-elderly", formData);
+          alert("Sponsorship form for an elderly person submitted successfully!");
+      } catch (error) {
+          console.error("Error submitting form", error);
+      }
+  };
+
   return (
     <div className="min-h-screen bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
       {/* Navbar */}

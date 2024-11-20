@@ -24,7 +24,7 @@ const Sponsor = () => {
 
   return (
     <div className={`${darkMode ? 'dark' : ''}`}>
-      <section className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+      <section className="bg-white dark:bg-glossy-black text-gray-800 dark:text-gray-100">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
           <div className="lg:text-center">
             <h2 className="text-base text-red-600 font-semibold tracking-wide uppercase">Defend • Rescue • Deliver</h2>
@@ -139,40 +139,7 @@ const Sponsor = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-100 dark:bg-gray-800 py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="col-span-1">
-              <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-100">Address</h4>
-              <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                ShareForCare Intl.<br />
-                P.O. Box 12345<br />
-                Your City, Your Country
-              </p>
-            </div>
-            <div className="col-span-1">
-              <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-100">Stay Connected</h4>
-              <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">Follow us on social media</p>
-              <div className="mt-4 space-x-4">
-                <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200">
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200">
-                  <i className="fab fa-twitter"></i>
-                </a>
-              </div>
-            </div>
-            <div className="col-span-1">
-              <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-100">Contact Us</h4>
-              <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                Email: contact@shareforcare.org<br />
-                Phone: +1 (234) 567-8900
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
+      
     </div>
   );
 };
