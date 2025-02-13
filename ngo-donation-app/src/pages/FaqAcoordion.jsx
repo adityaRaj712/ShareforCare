@@ -37,8 +37,8 @@ const FAQAccordion = () => {
   ];
 
   return (
-    <div className="max-w-2xl mx-auto mt-8">
-      <h1 className='text-center text-2xl mb-4'>FAQs</h1>
+    <div className={`${darkMode ? 'dark' : ''} max-w-2xl mx-auto mt-8 `}>
+      <h1 className='text-center text-2xl mb-4 text-black dark:text-white'>FAQs</h1>
       {faqs.map((faq, index) => (
         <div key={index} className="mb-4 border-b">
           <button

@@ -73,7 +73,7 @@ const SponsorForm2 = () => {
             <label className="block text-lg font-semibold">Sponsorship Amount</label>
             <div className="flex gap-4">
               <label>
-                <input type="radio" name="amount" value="$40" /> ₹ 10000
+                <input type="radio" name="amount" value="₹10000" /> ₹ 10000
               </label>
               <label>
                 <input type="radio" name="amount" value="Other Amount" /> Other Amount

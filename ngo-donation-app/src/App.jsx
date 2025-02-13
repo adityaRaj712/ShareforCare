@@ -15,6 +15,7 @@ import SponsorForm3 from './pages/SponsorForm3';
 import Blogs from './pages/Blogs';
 import QRCodePage from './pages/QRCodePage';
 import ThankYou from './pages/Thankyou';
+import DonateItems from './pages/DonateItems';
 
  // Optional: 404 Not Found page
 
@@ -35,6 +36,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blogs />} />
         <Route path="/donate" element={<Donate />} />
+        <Route path="/donate-items" element={<DonateItems/>} />
         <Route path="/sponsor" element={<Sponsor />} />
         <Route path="/sponsorform" element={<SponsorForm />} />
         <Route path="/sponsorform2" element={<SponsorForm2 />} />

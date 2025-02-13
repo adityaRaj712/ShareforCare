@@ -10,8 +10,8 @@ app.use(bodyParser.json());
 // MySQL Connection
 const db = mysql.createConnection({
     host: "localhost",
-    user: "root", // Default user for XAMPP
-    password: "", // Default password for XAMPP
+    user: "root", 
+    password: "",
     database: "reactngo", // Use the database you created
 });
 
@@ -48,6 +48,29 @@ app.post("/submit-sponsor-elderly", (req, res) => {
     db.query(query, [name, gender, age, amount, message], (err, result) => {
         if (err) return res.status(500).send(err);
         res.status(200).send("Sponsor form for an elderly person submitted successfully!");
+    });
+});
+
+// API Endpoint for Donations
+app.post("/submit-donation", (req, res) => {
+    const { name, email, visitDate, partyWithThem, partyDetails, selectedItems } = req.body;
+
+    if (!name || !email || !visitDate || !selectedItems || selectedItems.length === 0) {
+        return res.status(400).send("All fields are required!");
+    }
+
+    const donationQuery = "INSERT INTO donations (name, email, visit_date, party_with_them, party_details) VALUES (?, ?, ?, ?, ?)";
+    db.query(donationQuery, [name, email, visitDate, partyWithThem, partyDetails], (err, result) => {
+        if (err) return res.status(500).send(err);
+
+        const donationId = result.insertId;
+        const itemQuery = "INSERT INTO donated_items (donation_id, item_name, quantity) VALUES ?";
+        const itemValues = selectedItems.map(item => [donationId, item.name, item.quantity]);
+
+        db.query(itemQuery, [itemValues], (err) => {
+            if (err) return res.status(500).send(err);
+            res.status(200).send("Donation recorded successfully!");
+        });
     });
 });
 
