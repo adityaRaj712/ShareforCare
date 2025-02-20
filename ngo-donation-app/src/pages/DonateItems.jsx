@@ -96,14 +96,14 @@ const DonateItems = () => {
           placeholder="Your Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="border p-2 w-full rounded-md mb-2"
+          className="border p-2 w-full rounded-md mb-2 dark:text-black"
         />
         <input
           type="email"
           placeholder="Your Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="border p-2 w-full rounded-md mb-4"
+          className="border p-2 w-full rounded-md mb-4 dark:text-black"
         />
 
         {itemsList.map((item) => (
@@ -114,7 +114,7 @@ const DonateItems = () => {
               min="0"
               value={selectedItems[item.id] || ""}
               onChange={(e) => handleQuantityChange(item.id, parseInt(e.target.value))}
-              className="border p-2 w-20 text-center rounded-md"
+              className="border p-2 w-20 text-center rounded-md dark:text-black"
             />
           </div>
         ))}
@@ -147,7 +147,7 @@ const DonateItems = () => {
             type="date"
             value={visitDate}
             onChange={(e) => setVisitDate(e.target.value)}
-            className="border p-2 w-full rounded-md mt-2"
+            className="border p-2 w-full rounded-md mt-2 dark:text-black"
           />
         </div>
 
